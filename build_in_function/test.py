@@ -152,7 +152,7 @@ class TaskSix(CheckSolution):
         super().__init__(task_name)
 
     def test_case_1(self, solution):
-        return solution(5.555) == 5.56
+        return solution(5.555) == 5.55
     
     def test_case_2(self, solution):
         return solution(2.222) == 2.22
