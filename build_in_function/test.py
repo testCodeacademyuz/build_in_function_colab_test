@@ -12,6 +12,7 @@ class CheckSolution:
             "task_name": self.task_name,
             "is_correct": isSolved
         }
+        print(data)
         response = requests.post(self.url, data=data)
         if isSolved:
             # done emoji
@@ -252,13 +253,21 @@ class TaskTen(CheckSolution):
         self.checking(tg_username, isSolve, self.homework_name)
 
 
-q1 = TaskOne('build_func01', "	build_in_function")
-q2 = TaskTwo('build_func02', "	build_in_function")
-q3 = TaskThree('build_func03', "	build_in_function")
-q4 = TaskFour('build_func04', "	build_in_function")
-q5 = TaskFive('build_func05', "	build_in_function")
-q6 = TaskSix('build_func06', "	build_in_function")
-q7 = TaskSeven('build_func07', "	build_in_function")
-q8 = TaskEight('build_func08', "	build_in_function")
-q9 = TaskNine('build_func09', "	build_in_function")
-q10 = TaskTen('build_func10', "	build_in_function")
+q1 = TaskOne('build_func01', "build_in_function")
+q2 = TaskTwo('build_func02', "build_in_function")
+q3 = TaskThree('build_func03', "build_in_function")
+q4 = TaskFour('build_func04', "build_in_function")
+q5 = TaskFive('build_func05', "build_in_function")
+q6 = TaskSix('build_func06', "build_in_function")
+q7 = TaskSeven('build_func07', "build_in_function")
+q8 = TaskEight('build_func08', "build_in_function")
+q9 = TaskNine('build_func09', "build_in_function")
+q10 = TaskTen('build_func10', "build_in_function")
+
+# def main1(number):
+#     """
+#     Return the absolute value of a "number".
+#     """
+#     return abs(number)
+
+# q1.check(main1, "JalilovJavohir")
