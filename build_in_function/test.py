@@ -12,7 +12,7 @@ class CheckSolution:
             "task_name": self.task_name,
             "is_correct": isSolved
         }
-        print(data)
+        # print(data)
         response = requests.post(self.url, data=data)
         if isSolved:
             # done emoji
@@ -20,7 +20,12 @@ class CheckSolution:
         else:
             # fail emoji
             print("❌ Failed")
-        print(response.status_code)
+        if response.status_code == 404:
+            print("❗️ Siz kursga ro'yxatga olinmagansiz!")
+        elif response.status_code == 201:
+            print("❕ Sizning javobingiz muvafaqqiyatli yuborildi!")
+        else:
+            print("Sizda noma'lum xatolik yuz berdi!")
     
 
 # A integer type variable 'number' is given. Return the absolute value of a "number".
