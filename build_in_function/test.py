@@ -12,7 +12,7 @@ class CheckSolution:
             "task_name": self.task_name,
             "is_correct": isSolved
         }
-        response = requests.post(self.url, json=data)
+        response = requests.post(self.url, data=data)
         if isSolved:
             # done emoji
             print("✅ Accepted")
@@ -59,7 +59,7 @@ class TaskTwo(CheckSolution):
         super().__init__(task_name)
 
     def test_case_1(self, solution):
-        return solution == -2.55
+        return solution() == -2.55
     
     def check(self, solution, tg_username):
         test_cases = [
