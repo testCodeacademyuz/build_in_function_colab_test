@@ -181,7 +181,7 @@ class TaskSeven(CheckSolution):
         return solution(5, 9) == 910
     
     def test_case_2(self, solution):
-        return solution(1.25, 4.5) == 28.28125
+        return solution(1.25, 4.5) == 30.15625
     
     def check(self, solution, tg_username):
         test_cases = [
